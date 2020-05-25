@@ -1,0 +1,161 @@
+priority -50
+
+#! header
+snippet #! "#!/usr/bin/env python" b
+#!/usr/bin/env python
+$0
+endsnippet
+
+snippet "^# ?[uU][tT][fF]-?8" "# encoding: UTF-8" r
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+snippet ifmain "ifmain" b
+if __name__ == '__main__':
+	${1:${VISUAL:main()}}
+endsnippet
+
+snippet with "with" b
+with ${1:expr}`!p snip.rv = " as " if t[2] else ""`${2:var}:
+	${3:${VISUAL:pass}}
+$0
+endsnippet
+
+snippet for "for loop" b
+for ${1:item} in ${2:iterable}:
+	${3:${VISUAL:pass}}
+endsnippet
+
+########################################
+# Class & Special Method Name Snippets #
+########################################
+
+snippet class "class with docstrings" b
+class ${1:MyClass}(${2:object}):
+
+	"""${3:TODO: Add docstring.}"""
+
+	def __init__(self${4}):
+		$0
+endsnippet
+
+snippet context "context manager methods" b
+def __enter__(self):
+	${1:pass}
+
+def __exit__(self, exc_type, exc_value, traceback):
+	${2:pass}
+endsnippet
+
+snippet repr "methods implementing string representation"
+def __repr__(self):
+	${1:pass}
+
+def __str__(self):
+	${2:pass}
+endsnippet
+
+snippet def "function" b
+def ${1:function}(`!p
+if snip.indent:
+	snip.rv = 'self'`${2}):
+	${3:${VISUAL:pass}}
+endsnippet
+
+
+snippet defc "class method" b
+@classmethod
+def ${1:function}(cls${2}):
+	${3:${VISUAL:pass}}
+endsnippet
+
+
+snippet defs "static method" b
+@staticmethod
+def ${1:function}(${2:arg1}):
+	${3:${VISUAL:pass}}
+endsnippet
+
+
+snippet defp "property method" b
+@property
+def ${1:name}(self):
+	${2:return self._$1}$0
+endsnippet
+
+
+snippet from "from module import name" b
+from ${1:module} import ${2:Stuff}
+endsnippet
+
+
+####################
+# If / Else / Elif #
+####################
+snippet if "If" b
+if ${1:condition}:
+	${2:${VISUAL:pass}}
+endsnippet
+
+snippet ife "If / Else" b
+if ${1:condition}:
+	${2:${VISUAL:pass}}
+else:
+	${3:pass}
+endsnippet
+
+snippet ifee "If / Elif / Else" b
+if ${1:condition}:
+	${2:${VISUAL:pass}}
+elif ${3:condition}:
+	${4:pass}
+else:
+	${5:pass}
+endsnippet
+
+
+##########################
+# Try / Except / Finally #
+##########################
+snippet try "Try / Except" b
+try:
+	${1:${VISUAL:pass}}
+except ${2:Exception} as ${3:e}:
+	${4:raise $3}
+endsnippet
+
+snippet trye "Try / Except / Else" b
+try:
+	${1:${VISUAL:pass}}
+except ${2:Exception} as ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+endsnippet
+
+snippet tryf "Try / Except / Finally" b
+try:
+	${1:${VISUAL:pass}}
+except ${2:Exception} as ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}
+endsnippet
+
+snippet tryef "Try / Except / Else / Finally" b
+try:
+	${1:${VISUAL:pass}}
+except${2: ${3:Exception} as ${4:e}}:
+	${5:raise}
+else:
+	${6:pass}
+finally:
+	${7:pass}
+endsnippet
+
+snippet ipdb "ipdb expression" b
+import ipdb; ipdb.set_trace()
+endsnippet
+
+# vim:ft=snippets:

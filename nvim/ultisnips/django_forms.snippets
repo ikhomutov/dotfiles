@@ -1,0 +1,118 @@
+priority -50
+
+snippet djf "Form" b
+class ${1:FORMNAME}(forms.Form):
+
+	${2:# TODO: Define form fields here}
+endsnippet
+
+snippet djmf "ModelForm" b
+class ${1:MODELNAME}Form(forms.ModelForm):
+
+	class Meta:
+		model = $1
+endsnippet
+
+snippet djfbool "BooleanField" b
+${1:FIELDNAME} = forms.BooleanField($2)
+endsnippet
+
+snippet djfchar "CharField" b
+${1:FIELDNAME} = forms.CharField($2)
+endsnippet
+
+snippet djfchoice "ChoiceField" b
+${1:FIELDNAME} = forms.ChoiceField($2)
+endsnippet
+
+snippet djfcombo "ComboField" b
+${1:FIELDNAME} = forms.ComboField($2)
+endsnippet
+
+snippet djfdate "DateField" b
+${1:FIELDNAME} = forms.DateField($2)
+endsnippet
+
+snippet djfdatetime "DateTimeField" b
+${1:FIELDNAME} = forms.DateTimeField($2)
+endsnippet
+
+snippet djfdecimal "DecimalField" b
+${1:FIELDNAME} = forms.DecimalField($2)
+endsnippet
+
+snippet djfemail "EmailField" b
+${1:FIELDNAME} = forms.EmailField($2)
+endsnippet
+
+snippet djffile "FileField" b
+${1:FIELDNAME} = forms.FileField($2)
+endsnippet
+
+snippet djffilepath "FilePathField" b
+${1:FIELDNAME} = forms.FilePathField($2)
+endsnippet
+
+snippet djffloat "FloatField" b
+${1:FIELDNAME} = forms.FloatField($2)
+endsnippet
+
+snippet djfip "IPAddressField" b
+${1:FIELDNAME} = forms.IPAddressField($2)
+endsnippet
+
+snippet djfimg "ImageField" b
+${1:FIELDNAME} = forms.ImageField($2)
+endsnippet
+
+snippet djfint "IntegerField" b
+${1:FIELDNAME} = forms.IntegerField($2)
+endsnippet
+
+snippet djfmochoice "ModelChoiceField" b
+${1:FIELDNAME} = forms.ModelChoiceField($2)
+endsnippet
+
+snippet djfmomuchoice "ModelMultipleChoiceField" b
+${1:FIELDNAME} = forms.ModelMultipleChoiceField($2)
+endsnippet
+
+snippet djfmuval "MultiValueField" b
+${1:FIELDNAME} = forms.MultiValueField($2)
+endsnippet
+
+snippet djfmuchoice "MultipleChoiceField" b
+${1:FIELDNAME} = forms.MultipleChoiceField($2)
+endsnippet
+
+snippet djfnullbool "NullBooleanField" b
+${1:FIELDNAME} = forms.NullBooleanField($2)
+endsnippet
+
+snippet djfreg "RegexField" b
+${1:FIELDNAME} = forms.RegexField($2)
+endsnippet
+
+snippet djfslug "SlugField" b
+${1:FIELDNAME} = forms.SlugField($2)
+endsnippet
+
+snippet djfsdatetime "SplitDateTimeField" b
+${1:FIELDNAME} = forms.SplitDateTimeField($2)
+endsnippet
+
+snippet djftime "TimeField" b
+${1:FIELDNAME} = forms.TimeField($2)
+endsnippet
+
+snippet djftchoice "TypedChoiceField" b
+${1:FIELDNAME} = forms.TypedChoiceField($2)
+endsnippet
+
+snippet djftmuchoice "TypedMultipleChoiceField" b
+${1:FIELDNAME} = forms.TypedMultipleChoiceField($2)
+endsnippet
+
+snippet djfurl "URLField" b
+${1:FIELDNAME} = forms.URLField($2)
+endsnippet

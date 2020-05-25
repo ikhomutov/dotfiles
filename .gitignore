@@ -1,0 +1,7 @@
+__pycache__/
+.gitconfig
+
+.config/ranger/bookmarks
+.config/ranger/history
+
+.vim/plugged

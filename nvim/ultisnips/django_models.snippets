@@ -1,0 +1,129 @@
+priority -50
+
+snippet djm "Model" b
+class ${1:MODELNAME}(models.Model):
+	$0
+	class Meta:
+		verbose_name = "$1"
+		verbose_name_plural = "$1s"
+endsnippet
+
+snippet djmauto "AutoField" b
+${1:FIELDNAME} = models.AutoField($2)
+endsnippet
+
+snippet djmbauto "BigAutoField" b
+${1:FIELDNAME} = models.BigAutoField($2)
+endsnippet
+
+snippet djmbigint "BigIntegerField" b
+${1:FIELDNAME} = models.BigIntegerField($2)
+endsnippet
+
+snippet djmbinary "BinaryField" b
+${1:FIELDNAME} = models.BigIntegerField($2)
+endsnippet
+
+snippet djmbool "BooleanField" b
+${1:FIELDNAME} = models.BooleanField($2)
+endsnippet
+
+snippet djmchar "CharField" b
+${1:FIELDNAME} = models.CharField($2, max_length=${3:50})
+endsnippet
+
+snippet djmdate "DateField" b
+${1:FIELDNAME} = models.DateField($2)
+endsnippet
+
+snippet djmdatetime "DateTimeField" b
+${1:FIELDNAME} = models.DateTimeField($2)
+endsnippet
+
+snippet djmdecimal "DecimalField" b
+${1:FIELDNAME} = models.DecimalField($2, max_digits=${3:10}, decimal_places=${4:2})
+endsnippet
+
+snippet djmduration "DurationField" b
+${1:FIELDNAME} = models.DurationField($2)
+endsnippet
+
+snippet djmemail "EmailField" b
+${1:FIELDNAME} = models.EmailField($2)
+endsnippet
+
+snippet djmfile "FileField" b
+${1:FIELDNAME} = models.FileField($2)
+endsnippet
+
+snippet djmfilepath "FilePathField" b
+${1:FIELDNAME} = models.FilePathField($2, path='${3}')
+endsnippet
+
+snippet djmfloat "FloatField" b
+${1:FIELDNAME} = models.FloatField($2)
+endsnippet
+
+snippet djmfk "ForeignKey" b
+${1:FIELDNAME} = models.ForeignKey($2, on_delete=${3:models.CASCADE})
+endsnippet
+
+snippet djmgip "GenericIPAddressField" b
+${1:FIELDNAME} = models.GenericIPAddressField($2)
+endsnippet
+
+snippet djmimg "ImageField" b
+${1:FIELDNAME} = models.ImageField($2)
+endsnippet
+
+snippet djmint "IntegerField" b
+${1:FIELDNAME} = models.IntegerField($2)
+endsnippet
+
+snippet djmm2m "ManyToManyField" b
+${1:FIELDNAME} = models.ManyToManyField($2)
+endsnippet
+
+snippet djmnullbool "NullBooleanField" b
+${1:FIELDNAME} = models.NullBooleanField($2)
+endsnippet
+
+snippet djmo2o "OneToOneField" b
+${1:FIELDNAME} = models.OneToOneField($2, on_delete=${3:models.CASCADE})
+endsnippet
+
+snippet djmposint "PositiveIntegerField" b
+${1:FIELDNAME} = models.PositiveIntegerField($2)
+endsnippet
+
+snippet djmpossmallint "PositiveSmallIntegerField" b
+${1:FIELDNAME} = models.PositiveSmallIntegerField($2)
+endsnippet
+
+snippet djmslug "SlugField" b
+${1:FIELDNAME} = models.SlugField($2)
+endsnippet
+
+snippet djmsauto "SmallAutoField" b
+${1:FIELDNAME} = models.SmallAutoField($2)
+endsnippet
+
+snippet djmsmallint "SmallIntegerField" b
+${1:FIELDNAME} = models.SmallIntegerField($2)
+endsnippet
+
+snippet djmtext "TextField" b
+${1:FIELDNAME} = models.TextField($2)
+endsnippet
+
+snippet djmtime "TimeField" b
+${1:FIELDNAME} = models.TimeField($2)
+endsnippet
+
+snippet djmurl "URLField" b
+${1:FIELDNAME} = models.URLField($2)
+endsnippet
+
+snippet djmuuid "UUIDField" b
+${1:FIELDNAME} = models.UUIDField($2)
+endsnippet

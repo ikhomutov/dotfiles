@@ -1,0 +1,1 @@
+/home/ivankhomutov/.config/nvim/vim-plug/plug.vim

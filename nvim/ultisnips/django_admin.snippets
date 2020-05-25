@@ -1,0 +1,22 @@
+priority -50
+
+# ADMINS SNIPPETS
+
+snippet djama "Model Admin" b
+@admin.register(${1:MODELNAME})
+class $1Admin(admin.ModelAdmin):
+	list_display = ('$2',)
+	list_filter = ('$3',)
+endsnippet
+
+snippet djasinline "Stacked Inline" b
+class ${1:MODELNAME}Inline(admin.StackedInline):
+	model = ${2:$1}
+	extra = ${3:0}
+endsnippet
+
+snippet djatinline "Tabular Inline" b
+class ${1:MODELNAME}Inline(admin.TabularInline):
+	model = ${2:$1}
+	extra = ${3:0}
+endsnippet
